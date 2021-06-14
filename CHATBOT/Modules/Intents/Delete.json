@@ -1,0 +1,16 @@
+{
+  "Keywords": ["Удали", "Сотри", "Стереть" , "Убери","Уничтожь"],
+  "Variables": {
+    "name":
+      {"name_for_request":"Название события", "type":"Тип переменной для распознавания"},
+    "time":
+      {"name_for_request":"Время", "type":"Тип переменной для распознавания"}
+  },
+ "Necessary": {"name_of_event": "isNotEmpty", "HasTime": "isTrue"},
+    "Attributes_For_Execution": ["name_of_event",["time","DateFrom"],["time","Duration"]]
+
+ }
+
+
+
+

@@ -1,0 +1,20 @@
+{
+  "Keywords": ["Создай", "Создать", "Внеси" , "Запиши"],
+  "Variables": {
+    "name_of_event":
+      {"name_for_request":"Название события", "type":"str"},
+    "time":
+      {"name_for_request": "Время", "type": "dict",
+        "components":{"year":
+        {"name_for_request": "год", "type" : "Fixed"},
+          "month":  {"name_for_request": "месяц", "type" : "Fixed"},
+          "day" : {"name_for_request": "день", "type" : "Fixed"},
+          "hour": {"name_for_request": "во сколько", "type" : "Fixed/Period"},
+          "minute":{"name_for_request": "во сколько", "type" : "Fixed/Period"}
+          }
+        }
+    },
+    "Necessary": {"name_of_event": "isNotEmpty", "HasTime": "isTrue"},
+    "Attributes_For_Execution": ["name_of_event",["time","DateFrom"],["time","Duration"]]
+ }
+
